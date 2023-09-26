@@ -1,2 +1,1 @@
-# PasswordGenerator
-Password generator created using c++
+## PASSWORD GENERATOR GUI
