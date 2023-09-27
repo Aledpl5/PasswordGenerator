@@ -46,7 +46,7 @@ public class Window extends JFrame implements ActionListener{
 
     private void setPos() {
         lbl.setBounds(5,20, 5, 20);
-        cb.setBounds(10,20, 5, 5);
+        cb.setBounds(10,20, 20, 5);
         btn.setBounds(30,20, 5, 5);
     }
 
@@ -63,6 +63,7 @@ public class Window extends JFrame implements ActionListener{
         this.setSize(WIDTH, HEIGHT);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("GENERATORE PASSWORD");
+        //this.setLocation(800, 400);
     }
 
     @Override
