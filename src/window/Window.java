@@ -6,10 +6,16 @@ import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
+// import elements.Button;
+// import elements.Label;
+// import elements.TextArea;
+// import elements.TextField;
+// import elements.ComboLen;
+
 import java.awt.event.ActionListener;
 
 
-public class Window extends JFrame implements ActionListener{
+public class Window extends JFrame{
 
     JPanel p;
     private final int WIDTH = 850, HEIGHT = 500;
@@ -27,8 +33,6 @@ public class Window extends JFrame implements ActionListener{
 
         addElement();
         setPos();
-
-        btn.addActionListener(this);
 
         setFrame();
     }
@@ -70,10 +74,4 @@ public class Window extends JFrame implements ActionListener{
         this.setTitle("GENERATORE PASSWORD");
         //this.setLocation(800, 400);
     }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
-    } 
 }
