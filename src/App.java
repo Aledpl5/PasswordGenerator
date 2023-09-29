@@ -1,6 +1,4 @@
-import log.Log;
-import log.consts.LogEnum;
-
+import store.StorePassword;
 public class App {
     public static void main(String[] args){
 
