@@ -13,9 +13,9 @@ public class Log extends Thread {
 
     private final String path = System.getProperty("user.home") + "\\AppData\\Local\\pswgenerator\\";
     private final String  fileName = "log.txt";
-    private String logMessage = "";
-    private File file;
-    private LogEnum flag;
+    private final String logMessage;
+    private final File file;
+    private final LogEnum flag;
 
     /**
      * It creates the Log object.
@@ -61,10 +61,19 @@ public class Log extends Thread {
                 break;
         }
         s += this.logMessage + "\n\n";
-        writeInFile(s);
+        if(writeInFile(s)){
+            System.out.println("Log successfully written");
+        }else{
+            System.out.println("Error log");
+        }
         this.interrupt();
     }
 
+    /**
+     * It writes in the file the composed string for log file
+     * @param str log string
+     * @return true if the process went good, false otherwise
+     */
     private synchronized boolean writeInFile(String str) {
         try {
             Files.write(Paths.get(this.path + this.fileName), str.getBytes(), StandardOpenOption.APPEND);
