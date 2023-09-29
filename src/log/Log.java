@@ -17,6 +17,11 @@ public class Log extends Thread {
     private File file;
     private LogEnum flag;
 
+    /**
+     * It creates the Log object.
+     * @param flag enum for the log
+     * @param logMessage message to be written in the log file
+     */
     public Log(LogEnum flag, String logMessage) {
         this.file = new File(this.path + this.fileName);
         if (!this.file.exists()) {
