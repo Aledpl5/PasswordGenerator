@@ -20,7 +20,6 @@ public class Window extends JFrame{
     JPanel p;
     private final int WIDTH = 850, HEIGHT = 500;
     JLabel lbl;
-    String numc[]={" ","16", "32", "64"};  
     JComboBox cb;
     JButton btn;
 
@@ -41,11 +40,7 @@ public class Window extends JFrame{
         btn= new JButton("Genera");
     }
 
-    private void setComboBox() {
-        cb = new JComboBox(numc);  
-        cb.setSelectedIndex(0);
-        
-    }
+    private void setComboBox() { cb = new JComboBox(); }
 
     private void addElement() {
         this.p.add(lbl);

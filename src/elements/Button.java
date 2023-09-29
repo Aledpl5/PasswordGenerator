@@ -46,5 +46,4 @@ public class Button extends JButton {
         this.setBorderPainted(true);
         this.setContentAreaFilled(false);
     }
-
 }

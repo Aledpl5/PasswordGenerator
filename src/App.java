@@ -1,8 +1,8 @@
-import log.Log;
-import log.consts.LogEnum;
+import window.Window;
 
 public class App {
-    public static void main(String[] args){
-
+    public static void main(String[] args) throws Exception {
+        Window w = new Window();
+        w.setVisible(true);
     }
 }
