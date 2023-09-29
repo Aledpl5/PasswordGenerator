@@ -11,8 +11,9 @@ import log.consts.LogEnum;
 
 public class Log extends Thread {
 
-    private String path = System.getProperty("user.home") + "\\AppData\\Local\\pswgenerator\\";
-    private String fileName = "log.txt", logMessage;
+    private final String path = System.getProperty("user.home") + "\\AppData\\Local\\pswgenerator\\";
+    private final String  fileName = "log.txt";
+    private String logMessage = "";
     private File file;
     private LogEnum flag;
 
@@ -20,8 +21,10 @@ public class Log extends Thread {
         this.file = new File(this.path + this.fileName);
         if (!this.file.exists()) {
             try {
-                new File(this.path).mkdirs();
-                this.file.createNewFile();
+                if(new File(this.path).mkdirs())
+                    System.out.println("Created dirs");
+                if(this.file.createNewFile())
+                        System.out.println("File created");
             } catch (Exception e) {
                 e.printStackTrace();
             }
