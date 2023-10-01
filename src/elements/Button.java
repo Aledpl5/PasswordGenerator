@@ -21,9 +21,9 @@ public class Button extends JButton {
      * @param width button's width
      * @param height button's height
      */
-    public Button(String txt, int width, int height) {
+    public Button(String txt, int width, int height, int x, int y) {
         super(txt);
-        this.setSize(width, height);
+        this.setBounds(x, y, width, height);
         setStyle();
     }
 
